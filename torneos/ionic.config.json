@@ -1,0 +1,7 @@
+{
+  "name": "torneos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Torneo - Cuartos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cuartos de Final</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Primer combate -->
+      <ion-item>
+        <ion-label>Primer Combate</ion-label>
+        <ion-radio-group (ionChange)="seleccionarGanador(0, $event)">
+          <ion-item>
+            <ion-label>{{ participantes[0] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[0] }}"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{ participantes[1] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[1] }}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+
+      <!-- Segundo combate -->
+      <ion-item>
+        <ion-label>Segundo Combate</ion-label>
+        <ion-radio-group (ionChange)="seleccionarGanador(1, $event)">
+          <ion-item>
+            <ion-label>{{ participantes[2] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[2] }}"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{ participantes[3] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[3] }}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+
+      <!-- Tercer combate -->
+      <ion-item>
+        <ion-label>Tercer Combate</ion-label>
+        <ion-radio-group (ionChange)="seleccionarGanador(2, $event)">
+          <ion-item>
+            <ion-label>{{ participantes[4] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[4] }}"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{ participantes[5] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[5] }}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+
+      <!-- Cuarto combate -->
+      <ion-item>
+        <ion-label>Cuarto Combate</ion-label>
+        <ion-radio-group (ionChange)="seleccionarGanador(3, $event)">
+          <ion-item>
+            <ion-label>{{ participantes[6] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[6] }}"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{ participantes[7] }}</ion-label>
+            <ion-radio slot="start" value="{{ participantes[7] }}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+
+      <!-- Botón para guardar -->
+      <ion-button expand="block" (click)="guardarResultados()" [disabled]="!todosSeleccionados">Guardar Resultados</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Torneo - Final</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Final</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Primer combate -->
+      <ion-item>
+        <ion-label>Combate</ion-label>
+        <ion-radio-group (ionChange)="seleccionarGanador(0, $event)">
+          <ion-item>
+            <ion-label>{{ resultados2[0] }}</ion-label>
+            <ion-radio slot="start" value="{{ resultados2[0] }}"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{ resultados2[1] }}</ion-label>
+            <ion-radio slot="start" value="{{ resultados2[1] }}"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+
+      <!-- Botón para guardar -->
+      <ion-button expand="block" (click)="guardarResultados()" [disabled]="!todosSeleccionados">Guardar Resultados</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
