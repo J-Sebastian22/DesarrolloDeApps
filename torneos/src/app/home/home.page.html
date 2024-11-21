@@ -1,13 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Torneos</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Registro de Participantes</ion-card-title>
+      <ion-card-title>Participantes</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="formGroup" (ngSubmit)="guardarDatos()">
@@ -15,34 +9,42 @@
         <ion-item>
           <ion-label position="floating">Participante 1</ion-label>
           <ion-input type="text" formControlName="participante1"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Participante 2</ion-label>
           <ion-input type="text" formControlName="participante2"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Participante 3</ion-label>
           <ion-input type="text" formControlName="participante3"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Participante 4</ion-label>
           <ion-input type="text" formControlName="participante4"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Participante 5</ion-label>
           <ion-input type="text" formControlName="participante5"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Participante 6</ion-label>
           <ion-input type="text" formControlName="participante6"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Participante 7</ion-label>
           <ion-input type="text" formControlName="participante7"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Participante 8</ion-label>
           <ion-input type="text" formControlName="participante8"></ion-input>
+          <ion-icon name="person-circle-outline" slot="end"></ion-icon>
         </ion-item>
         <ion-button expand="block" type="submit" [disabled]="!formGroup.valid">
           Guardar

@@ -1,9 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Torneo - Cuartos</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-card>
     <ion-card-header>
@@ -15,7 +9,7 @@
         <ion-label>Primer Combate</ion-label>
         <ion-radio-group (ionChange)="seleccionarGanador(0, $event)">
           <ion-item>
-            <ion-label>{{ participantes[0] }}</ion-label>
+            <ion-label class="participante">{{ participantes[0] }}</ion-label>
             <ion-radio slot="start" value="{{ participantes[0] }}"></ion-radio>
           </ion-item>
           <ion-item>
@@ -24,6 +18,8 @@
           </ion-item>
         </ion-radio-group>
       </ion-item>
+      <br>
+      <br>
 
       <!-- Segundo combate -->
       <ion-item>
@@ -39,6 +35,8 @@
           </ion-item>
         </ion-radio-group>
       </ion-item>
+      <br>
+      <br>
 
       <!-- Tercer combate -->
       <ion-item>
@@ -54,6 +52,8 @@
           </ion-item>
         </ion-radio-group>
       </ion-item>
+      <br>
+      <br>
 
       <!-- Cuarto combate -->
       <ion-item>
@@ -69,6 +69,8 @@
           </ion-item>
         </ion-radio-group>
       </ion-item>
+      <br>
+      <br>
 
       <!-- Botón para guardar -->
       <ion-button expand="block" (click)="guardarResultados()" [disabled]="!todosSeleccionados">Guardar Resultados</ion-button>
